@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+/* Para que todos los elementos del html lo hereden */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+/* overflow es para que por responsividad no se desborde el contenido */
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+/* para que las img sean responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-form {
+    margin: auto;
+    text-align: center;
+}
+
+.search-form input {
+    display: block;
+    margin: auto;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.grid-fluid {
+    margin: 1rem auto;
+    max-width: 90%;
+    display: grid;
+    /* dependiendo de cuántos elementos tenga en grid genere ese número de columnas (que se pueda ajustar
+    al número de columnas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* el sticky es para que cuando llegue a top 0 se quede fija */
+.header {
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: aliceblue;
+}
+/*  uso un selector contextual de CSS: > es selector de hijos directos y con el *
+le estoy diciendo que no importa que etiqueta sea, mientra sea hija en primer nivel,
+mientras sea hija del header, aplique un estilo*/
+.header>* {
+    margin: 1rem auto;
+}
+
+.loader {
+    margin: 1rem auto;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+}
+
+.post-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    background-color: #eceff1;
+}
+
+.post-card p {
+    display: flex;
+    justify-content: space-between;
+}
